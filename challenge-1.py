@@ -1,14 +1,14 @@
  
-def challenge_1():
+def main():
     try:
         # Ask the user for their name
-        name = input("Please enter your name: ")
+        name = input("Please enter your name: ").upper()
         
         # Check if the name is empty or contains only spaces
         if not name.strip():
             raise ValueError("Name cannot be empty. Please enter a valid name.")
         
-        age = int(input("What is your age " + name + "?"))
+        age = int(input("What is your age " + name + "?"))      
         
     except ValueError as e:
         # Handle the ValueError and print a custom error message
@@ -19,4 +19,4 @@ def challenge_1():
         print(f"An unexpected error occurred: {e}")
 
 # Call the function to run the script
-challenge_1()
+main()
